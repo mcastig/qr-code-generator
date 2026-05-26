@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/qr-code-generator/' : '/',
   plugins: [react()],
   test: {
     environment: 'jsdom',
@@ -26,4 +27,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))

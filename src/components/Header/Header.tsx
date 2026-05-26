@@ -8,7 +8,7 @@ function Header({ compact = false }: HeaderProps) {
   return (
     <header className={`header ${compact ? 'header--compact' : ''}`}>
       <img
-        src={compact ? '/Logo-small.svg' : '/Logo.svg'}
+        src={`${import.meta.env.BASE_URL}${compact ? 'Logo-small.svg' : 'Logo.svg'}`}
         alt="QRCODE"
         className="header__logo"
       />

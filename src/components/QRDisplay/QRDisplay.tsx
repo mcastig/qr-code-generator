@@ -70,7 +70,11 @@ function QRDisplay({ url }: QRDisplayProps) {
           onClick={handleDownload}
         >
           Download
-          <img src="/icon-download.svg" alt="" aria-hidden="true" />
+          <img
+            src={`${import.meta.env.BASE_URL}icon-download.svg`}
+            alt=""
+            aria-hidden="true"
+          />
         </button>
         <button
           type="button"
@@ -78,7 +82,11 @@ function QRDisplay({ url }: QRDisplayProps) {
           onClick={handleShare}
         >
           {shareStatus === 'copied' ? 'Copied!' : 'Share'}
-          <img src="/icon-link.svg" alt="" aria-hidden="true" />
+          <img
+            src={`${import.meta.env.BASE_URL}icon-link.svg`}
+            alt=""
+            aria-hidden="true"
+          />
         </button>
       </div>
 
