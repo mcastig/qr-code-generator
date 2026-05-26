@@ -1,0 +1,92 @@
+:root {
+  --color-light: #f2f5f9;
+  --color-primary: #263fa9;
+  --color-primary-hover: #1d318a;
+  --color-dark: #030616;
+  --color-paper: #fafaf9;
+  --color-overlay: #f8fafc1a;
+
+  --button-glow: rgba(38, 63, 169, 0.08);
+  --card-shadow: rgba(3, 6, 22, 0.35);
+
+  --font-sans: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root,
+[data-theme='dark'] {
+  --bg: var(--color-dark);
+  --bg-pattern: url('/qa-bg.jpg');
+  --text: var(--color-light);
+  --text-muted: rgba(242, 245, 249, 0.6);
+  --input-bg: var(--color-dark);
+  --input-border: var(--color-primary);
+  --button-bg: var(--color-primary);
+  --button-text: var(--color-light);
+  --card-bg: var(--color-paper);
+  --card-text: var(--color-dark);
+  --halo: var(--color-overlay);
+  --toggle-bg: var(--color-overlay);
+  --toggle-bg-hover: rgba(248, 250, 252, 0.16);
+  --toggle-border: rgba(248, 250, 252, 0.16);
+}
+
+[data-theme='light'] {
+  --bg: var(--color-light);
+  --bg-pattern: none;
+  --text: var(--color-dark);
+  --text-muted: rgba(3, 6, 22, 0.6);
+  --input-bg: #ffffff;
+  --input-border: var(--color-primary);
+  --button-bg: var(--color-primary);
+  --button-text: var(--color-light);
+  --card-bg: var(--color-paper);
+  --card-text: var(--color-dark);
+  --halo: rgba(3, 6, 22, 0.06);
+  --toggle-bg: rgba(3, 6, 22, 0.04);
+  --toggle-bg-hover: rgba(3, 6, 22, 0.1);
+  --toggle-border: rgba(3, 6, 22, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+  background-image: var(--bg-pattern);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+input {
+  font-family: inherit;
+}
