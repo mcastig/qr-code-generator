@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header__logo {
+  height: 40px;
+  width: auto;
+  transition: height 0.25s ease;
+}
+
+.header--compact .header__logo {
+  height: 24px;
+}
+
+[data-theme='light'] .header__logo {
+  filter: invert(1);
+}
